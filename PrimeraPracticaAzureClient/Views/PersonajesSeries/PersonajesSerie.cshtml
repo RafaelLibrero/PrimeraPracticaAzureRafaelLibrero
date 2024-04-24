@@ -1,0 +1,76 @@
+﻿@model IEnumerable<PrimeraPracticaAzureClient.Models.PersonajeSerie>
+
+@{
+    ViewData["Title"] = "PersonajesSerie";
+    List<string> series = ViewData["SERIES"] as List<string>;
+}
+
+<h1>PersonajesSerie</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<form method="post">
+    <label>Serie</label>
+    <select name="serie">
+        @foreach(var serie in series)
+        {
+            <option value="@serie">@serie</option>
+        }
+    </select>
+    <button>
+        Cargar personajes
+    </button>
+</form>
+@if (Model != null)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.IdPersonaje)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Nombre)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Imagen)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Serie)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IdPersonaje)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nombre)
+                    </td>
+                    <td>
+                        <img src="@Html.DisplayFor(modelItem => item.Imagen)" />
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Serie)
+                    </td>
+                    <td>
+                        <a asp-action="Edit"
+                           asp-route-id="@item.IdPersonaje">
+                            Editar
+                        </a>
+                        <a asp-action="Delete"
+                           asp-route-id="@item.IdPersonaje">
+                            Eliminar
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

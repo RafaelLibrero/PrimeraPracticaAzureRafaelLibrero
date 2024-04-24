@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34622.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrimeraPracticaAzureApi", "PrimeraPracticaAzureApi\PrimeraPracticaAzureApi.csproj", "{AF140077-5804-4EFC-AD9D-D9516358233B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrimeraPracticaAzureClient", "PrimeraPracticaAzureClient\PrimeraPracticaAzureClient.csproj", "{24D9FDD4-DD01-4620-8C4D-ACC68E38AD56}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AF140077-5804-4EFC-AD9D-D9516358233B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF140077-5804-4EFC-AD9D-D9516358233B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF140077-5804-4EFC-AD9D-D9516358233B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF140077-5804-4EFC-AD9D-D9516358233B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24D9FDD4-DD01-4620-8C4D-ACC68E38AD56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24D9FDD4-DD01-4620-8C4D-ACC68E38AD56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24D9FDD4-DD01-4620-8C4D-ACC68E38AD56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24D9FDD4-DD01-4620-8C4D-ACC68E38AD56}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DEB96074-434B-42B7-B055-A32495A16DEB}
+	EndGlobalSection
+EndGlobal
