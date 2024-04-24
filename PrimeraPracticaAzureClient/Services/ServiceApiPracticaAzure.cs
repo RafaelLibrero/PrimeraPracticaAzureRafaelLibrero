@@ -107,7 +107,7 @@ namespace PrimeraPracticaAzureClient.Services
                 client.DefaultRequestHeaders.Clear();
                 client.DefaultRequestHeaders.Accept.Add(this.Header);
                 HttpResponseMessage response =
-                    await client.PostAsync(request, content);
+                    await client.PutAsync(request, content);
             }
         }
 
