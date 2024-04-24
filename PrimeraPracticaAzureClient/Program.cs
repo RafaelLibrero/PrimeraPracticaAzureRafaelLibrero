@@ -1,7 +1,11 @@
+using PrimeraPracticaAzureClient.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddTransient<ServiceApiPracticaAzure>();
 
 var app = builder.Build();
 
@@ -20,8 +24,11 @@ app.UseRouting();
 
 app.UseAuthorization();
 
-app.MapControllerRoute(
+app.UseMvc(routes =>
+{
+    routes.MapRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    template: "{controller=Home}/{action=Index}/{id?}");
+});
 
 app.Run();
